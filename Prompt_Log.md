@@ -8,7 +8,7 @@
 
 | # | Điểm phản biện | Phân tích (số từ Excel) | Quyết định đề xuất | Thay đổi ở Excel |
 |---|---|---|---|---|
-| 1a | Thiếu **phí cổng thanh toán** | Khoản này không nằm trong 5 thành phần của đề; ước tính 2,5% doanh thu làm GM từ 69,5% còn 67,0%. | **Partial** | Không đưa vào Cost/Job; thêm dòng ghi nhớ `2_Pricing!B50` (GM sau phí cổng thanh toán). Tỷ lệ 2,5% là ước tính, chưa xác minh. |
+| 1a | Thiếu **phí cổng thanh toán** | Khoản này không nằm trong 5 thành phần của đề; ước tính 2,5% doanh thu làm GM từ 69,5% còn 67,0%. | **Partial** | Không đưa vào Cost/Job; thêm dòng ghi nhớ `2_Pricing!B51` (GM sau phí cổng thanh toán). Tỷ lệ 2,5% là ước tính, chưa xác minh. |
 | 1b | **Observability / chạy eval** hay bị quên | Đã có trong Infra (`$0,0020`/job) nhưng đó là giả định, chưa đo; LLM-judge chạy trên mẫu 5% còn tốn thêm token. | **Accept** | Giữ dòng riêng ở S5 để không bị lẫn; ghi nhận cần đo khi có eval. |
 | 1c | **Retry/timeout** = 7% chưa đo | Retry cộng thêm $10,84/tháng, đủ nhỏ nhưng là ước tính. | **Accept** | Giữ 7% (trong dải 5–10% của đề), đánh dấu "ước tính". |
 | 1d | **Egress / storage / vector DB tăng theo thời gian** | Hai dòng storage + vector chiếm $0,0015/job, tức ~4% Cost/Job; tăng tuyến tính khi lưu 12 tháng. | **Accept** | Không đổi số; nhắc rà lại khi có dữ liệu thật. |
